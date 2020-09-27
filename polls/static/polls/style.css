@@ -1,13 +1,22 @@
-.detail.container {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+:root {
+  --container-width: 301px;
+  --vote-again-width: 200px;
+}
+
+body {
+  margin: 0;
+}
+
+.poll.container {
+  font-family: 'Helvetica Neue', Arial, sans-serif !important;
 
   height: 304px;
   width: 100vw;
   
-  margin: 62px 37 50px;
+  margin: 62px auto 50px;
 }
 
-.detail .inner-container {
+.poll .inner-container {
   background-color: #5773FF;
   color: #fff;
 
@@ -15,33 +24,38 @@
   padding: 15px 9px 23px;
   
   min-height: 192px;
-  width: 301px;
+  width: var(--container-width);
 
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.16);
 }
 
-.detail .inner-container h1 {
+.poll .inner-container h1 {
   font-size: 1.25rem;
   font-weight: 600;
 }
 
-.detail form {
+.poll .inner-container h2 {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.poll-detail form {
   padding-top: 11px;
   display: flex;
   flex-flow: column nowrap;
 }
 
-.detail .poll-choice {
+.poll-detail .poll-choice {
   font-size: 0.75rem;
   font-weight: 600;
   margin-bottom: 7px;
 }
 
-.detail input[type="radio"] {
+.poll-detail input[type="radio"] {
   visibility:hidden;
 }
-.detail label {
+.poll-detail label {
   display: inline-block;
 
   cursor: pointer;
@@ -49,22 +63,58 @@
   border: 2px solid #fff;
   border-radius: 16px;
 }
-.detail input:checked + label {
+.poll-detail input:checked + label {
   background-color: #fff;
   color: #5773FF;
 }
 
-.detail input[type="submit"] {
+.poll-detail input[type="submit"] {
   width: 96px;
   height: 32px;
 
-  border: 2px solid #fff;
-  border-radius: 16px;
+  /* border: 2px solid #fff;
+  border-radius: 16px; */
+  border: none;
   background-color: #5773FF;
   color: #fff;
 
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 600;
 
   margin: 12px auto 0;
+}
+
+.poll.results ul,
+.poll.index ul {
+  list-style-type: none;
+  list-style-position: outside;
+}
+
+.poll.results li,
+.poll.index li {
+  padding: 3px 0;
+}
+
+.poll.index li a {
+  display: inline-block;
+  margin-top: 6px;
+  color: #fff;
+  text-decoration: none;
+  
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.poll.results a, 
+.poll.results a:visited {
+  display: inline-block;
+  margin-top: 6px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  width: var(--vote-again-width);
+  padding: 0 calc( var(--container-width) - var(--vote-again-width) );
+
+  font-size: 1.25rem;
+  font-weight: 600;
 }
