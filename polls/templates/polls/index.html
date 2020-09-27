@@ -1,11 +1,27 @@
-<h1>Question List</h1>
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Polls</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+  <!-- <link rel="icon" href="/favicon.png" sizes="16x16" type="image/png"> -->
+  <!-- <link rel="canonical" href="http://example.com/"> -->
+  <meta name="description" content="mygoodness poll detail">
+</head>
+<body>
+	<h1>Question List</h1>
 
-{% if latest_question_list %}
-    <ul>
-    {% for question in latest_question_list %}
-        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
+	{% if latest_question_list %}
+			<ul>
+			{% for question in latest_question_list %}
+					<li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+			{% endfor %}
+			</ul>
+	{% else %}
+			<p>No polls are available.</p>
+	{% endif %}
+</body>
+</html>

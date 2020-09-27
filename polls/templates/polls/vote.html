@@ -1,3 +1,18 @@
-<h1>Vote</h1>
-<h2>You are voting on {{ question.question_text }}</h2>
-
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vote</title>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+  <!-- <link rel="icon" href="/favicon.png" sizes="16x16" type="image/png"> -->
+  <!-- <link rel="canonical" href="http://example.com/"> -->
+  <meta name="description" content="mygoodness poll detail">
+</head>
+<body>
+  <h1>Vote</h1>
+  <h2>You are voting on {{ question.question_text }}</h2>
+</body>
+</html>

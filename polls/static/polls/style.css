@@ -1,0 +1,70 @@
+.detail.container {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+
+  height: 304px;
+  width: 100vw;
+  
+  margin: 62px 37 50px;
+}
+
+.detail .inner-container {
+  background-color: #5773FF;
+  color: #fff;
+
+  margin: 0 auto;
+  padding: 15px 9px 23px;
+  
+  min-height: 192px;
+  width: 301px;
+
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.16);
+}
+
+.detail .inner-container h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.detail form {
+  padding-top: 11px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.detail .poll-choice {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.detail input[type="radio"] {
+  visibility:hidden;
+}
+.detail label {
+  display: inline-block;
+
+  cursor: pointer;
+  padding: 6px 25px;
+  border: 2px solid #fff;
+  border-radius: 16px;
+}
+.detail input:checked + label {
+  background-color: #fff;
+  color: #5773FF;
+}
+
+.detail input[type="submit"] {
+  width: 96px;
+  height: 32px;
+
+  border: 2px solid #fff;
+  border-radius: 16px;
+  background-color: #5773FF;
+  color: #fff;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  margin: 12px auto 0;
+}
