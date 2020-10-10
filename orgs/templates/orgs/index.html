@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Organizations</title>
+	{% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'orgs/style.css' %}">
+  <!-- <link rel="icon" href="/favicon.png" sizes="16x16" type="image/png"> -->
+  <!-- <link rel="canonical" href="http://example.com/"> -->
+  <meta name="description" content="mygoodness organizations list">
+</head>
+<body>
+	<div class="poll index container">
+		<div class="inner-container">
+			<h1>Organizations (orgs) List</h1>
+
+			{% if latest_org_list %}
+					<ul>
+					{% for org in latest_org_list %}
+							<li><a href="{% url 'orgs:stream' org.id %}">{{ org.title_text }}</a></li>
+					{% endfor %}
+					</ul>
+			{% else %}
+					<p>No orgs are available.</p>
+			{% endif %}
+		</div>
+	</div>
+</body>
+</html>

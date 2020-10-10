@@ -6,6 +6,7 @@ from django.utils import timezone
 # Create your models here.
 
 class Org(models.Model):
+  organization_text = models.CharField(max_length=80, null=True)
   category_text = models.CharField(max_length=40)
   title_text = models.CharField(max_length=40)
   subtitle_text = models.CharField(max_length=200, null=True)
