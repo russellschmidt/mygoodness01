@@ -100,6 +100,7 @@ a.button-link_to-detail {
 .organization.detail h1, 
 .organization.detail h2 {
   font-weight: normal;
+  text-transform: capitalize;
 }
 
 .organization.detail figure {

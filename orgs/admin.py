@@ -5,7 +5,7 @@ from .models import Org, Detail
 
 class DetailInline(admin.StackedInline):
     model = Detail
-
+    extra = 0
 
 class OrgAdmin(admin.ModelAdmin):
     fieldsets = [
