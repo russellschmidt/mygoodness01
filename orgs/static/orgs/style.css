@@ -1,120 +1,79 @@
+@font-face {font-family: "Trade Gothic Next LT Pro BdCn"; 
+  src: url("https://db.onlinewebfonts.com/t/b491db99790e4fce858c18892824b2a5.eot"); 
+  src: url("https://db.onlinewebfonts.com/t/b491db99790e4fce858c18892824b2a5.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/b491db99790e4fce858c18892824b2a5.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/b491db99790e4fce858c18892824b2a5.woff") format("woff"), url("https://db.onlinewebfonts.com/t/b491db99790e4fce858c18892824b2a5.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/b491db99790e4fce858c18892824b2a5.svg#Trade Gothic Next LT Pro BdCn") format("svg"); }
+
 :root {
-  --container-width: 301px;
-  --vote-again-width: 200px;
+  --inner-container-width: 301px;
+
+  --outer-container-height: 501px;
+  --outer-container-width: 375px;
 }
 
 body {
   margin: 0;
 }
 
-.poll.container {
-  font-family: 'Helvetica Neue', Arial, sans-serif !important;
-
-  height: 304px;
-  width: 100vw;
+.organization.container {
+  height: var(--outer-container-height);
+  width: var(--outer-container-width);
   
   margin: 62px auto 50px;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.poll .inner-container {
-  background-color: #5773FF;
+.organization.detail.container > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.organization .inner-container {
+
   color: #fff;
 
   margin: 0 auto;
   padding: 15px 9px 23px;
   
   min-height: 192px;
-  width: var(--container-width);
+  width: var(--inner-container-width);
 
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.16);
 }
 
-.poll .inner-container h1 {
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-.poll .inner-container h2 {
+.organization .category-text {
+  font-family: 'Helvetica Neue', Arial, sans-serif;;
+  margin: 310px 0 0;
   font-size: 0.92rem;
   font-weight: 600;
+  height: 17px;
+  line-height: 1;
+  padding-top: 3px;
 }
 
-.poll-detail form {
-  padding-top: 11px;
-  display: flex;
-  flex-flow: column nowrap;
+.organization .title-text {
+  font-family: trade-gothic-next-compressed, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 0;
+  height: 85px;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
-.poll-detail .poll-choice {
-  font-size: 0.75rem;
-  font-weight: 600;
-  margin-bottom: 7px;
-}
-
-.poll-detail input[type="radio"] {
-  visibility:hidden;
-}
-.poll-detail label {
-  display: inline-block;
-
-  cursor: pointer;
-  padding: 6px 25px;
-  border: 2px solid #fff;
-  border-radius: 16px;
-}
-.poll-detail input:checked + label {
-  background-color: #fff;
-  color: #5773FF;
-}
-
-.poll-detail input[type="submit"] {
-  width: 96px;
+button.button-label {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.75;
+  font-weight: bold;
+  margin: 8px 0 29px;
+  padding: 9px 18px 8px;
   height: 32px;
-
-  /* border: 2px solid #fff;
-  border-radius: 16px; */
+  background: linear-gradient(#3497fd 0%, #3acce1 100%);
   border: none;
-  background-color: #5773FF;
+  border-radius: 8px;
+
   color: #fff;
-
-  font-size: 1rem;
-  font-weight: 600;
-
-  margin: 12px auto 0;
-}
-
-.poll.results ul,
-.poll.index ul {
-  list-style-type: none;
-  list-style-position: outside;
-}
-
-.poll.results li,
-.poll.index li {
-  padding: 3px 0;
-}
-
-.poll.index li a {
-  display: inline-block;
-  margin-top: 6px;
-  color: #fff;
-  text-decoration: none;
-  
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.poll.results a, 
-.poll.results a:visited {
-  display: inline-block;
-  margin-top: 6px;
-  color: #fff;
-  text-decoration: none;
-  text-align: center;
-  width: var(--vote-again-width);
-  padding: 0 calc( var(--container-width) - var(--vote-again-width) );
-
-  font-size: 1.25rem;
-  font-weight: 600;
 }
