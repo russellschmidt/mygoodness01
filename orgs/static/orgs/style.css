@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  box-shadow: 1px 1px 1px 1px #aaa;
+  box-shadow: 1px 1px 1px 1px #ccc;
 }
 
 /* STREAM */
@@ -84,18 +84,22 @@ a.button-link_to-detail {
 
 /* DETAIL */
 .organization.detail.container {
-  height: auto;
   width: var(--outer-container-width);
   margin: 62px auto 50px;
   color: #000;
 }
 
-.organization.detail header h1{
+.organization.detail header h2 {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 1.08rem;
   margin: 0 auto 13px;
   padding-top: 30px;
   text-align: center;
+}
+
+.organization.detail h1, 
+.organization.detail h2 {
+  font-weight: normal;
 }
 
 .organization.detail figure {
@@ -105,4 +109,23 @@ a.button-link_to-detail {
   height: var(--outer-container-width);
   width: var(--outer-container-width);
   text-align: center;
+}
+
+.organization.detail main {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  padding-bottom: 67px;
+}
+
+.organization.detail main h1 {
+  font-size: 1.375rem;
+  margin: 50px 20px 0;
+}
+
+.organization.detail main p {
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+
+  margin: 23px auto 0;
+  padding: 0 23px;
 }
