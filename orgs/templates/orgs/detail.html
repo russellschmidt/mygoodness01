@@ -14,11 +14,19 @@
 </head>
 <body>
   <div class="organization detail container">
+    {% for detail in org.detail_set.all %}
+    <header>
+      <h1>{{ detail.org_detail_page_title }} </h1>
+    </header>
 		<div class="inner-container">
-      {% for detail in org.detail_set.all %}
-        {{ detail.org_detail_description}}
-      {% endfor %}
-		</div>
+      <figure>
+        <img src={{detail.org_detail_hero_image}} alt={{detail.org_detail_page_title}}/>
+      </figure>
+      
+      <p>{{ detail.org_detail_description|linebreaks }}</p>
+      
+    </div>
+    {% endfor %}
 	</div>
 </body>
 </html>
