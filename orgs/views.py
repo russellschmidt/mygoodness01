@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render
 
-from .models import Org
+from .models import Org, Detail
 
 def index(request):
     latest_org_list = Org.objects.order_by('-pub_date')[:5]

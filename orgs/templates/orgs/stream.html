@@ -15,13 +15,15 @@
 <body>
   <div class="organization detail container" 
     style="background: url({{ org.background_image }}) no-repeat center center fixed;">
-    <a href="{% url 'orgs:detail' org.id %}">
-      <div class="inner-container">
-        <h3 class="category-text">{{ org.category_text }}</h3>
-        <h1 class="title-text">{{ org.title_text }}</h1>
-        <button class="button-label">{{ org.button_label }}</button>
-      </div>
-    </a>
+    
+    <div class="inner-container">
+      <h3 class="category-text">{{ org.category_text }}</h3>
+      <h1 class="title-text">{{ org.title_text }}</h1>
+      <button class="button-label">
+        <a href="{% url 'orgs:detail' org.id %}" class="button-link_to-detail">{{ org.button_label }}</a>
+      </button>
+    </div>
+    
 	</div>
 </body>
 </html>

@@ -13,12 +13,11 @@
   <meta name="description" content="mygoodness organization detail">
 </head>
 <body>
-  <div class="organization detail container" 
-    style="background: url({{ org.background_image }}) no-repeat center center fixed;">
+  <div class="organization detail container">
 		<div class="inner-container">
-      <h3 class="category-text">{{ org.category_text }}</h3>
-      <h1 class="title-text">{{ org.title_text }}</h1>
-      <button class="button-label">{{ org.button_label }}</button>
+      {% for detail in org.detail_set.all %}
+        {{ detail.org_detail_description}}
+      {% endfor %}
 		</div>
 	</div>
 </body>
